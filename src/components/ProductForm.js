@@ -30,6 +30,11 @@ const ProductForm = ({user, token, getProducts, product, setProduct}) => {
         getProducts();
     }
 
+    const handleOnChange = async (event) => {
+            setProduct({...product, [event.target.name]: event.target.value});
+        }
+    
+
     if (user.isAdmin) {
         return (<div>
             <h2>Add Product</h2>
